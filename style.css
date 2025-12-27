@@ -1,54 +1,15 @@
-:root {
-  --nd-blue: #0c2340;
-  --nd-gold: #c99700;
-  --sky-blue: #e6f2ff;
-  --white: #ffffff;
-}
-
-body {
-  font-family: 'Inter', sans-serif;
-  margin: 0;
-  background-color: var(--sky-blue);
-  color: var(--nd-blue);
-}
-
-h1 {
-  font-size: 2.4rem;
-  font-weight: 600;
-}
-
-h2 {
-  font-size: 1.8rem;
-  font-weight: 500;
-}
-
-p {
-  font-size: 1.05rem;
-  line-height: 1.6;
-}
-
-/* Navigation bar */
-nav {
-  background-color: var(--nd-blue);
-  padding: 15px;
-}
-
-nav a {
-  color: white;
-  text-decoration: none;
-  margin-right: 20px;
-  font-weight: bold;
-}
-
-nav a:hover {
-  color: var(--nd-gold);
-}
-
-/* Main layout */
+/* Container layout: profile & right column side by side */
 .container {
+  display: flex;
+  justify-content: space-between;
   max-width: 1000px;
   margin: auto;
   padding: 40px 20px;
+}
+
+/* Profile + About Me stacked on left */
+.profile-about {
+  max-width: 600px; /* adjust as needed */
 }
 
 /* Profile section */
@@ -67,28 +28,27 @@ nav a:hover {
   border: 4px solid var(--nd-gold);
 }
 
-/* Image gallery */
-.gallery {
-  margin-top: 40px;
+/* About Me text */
+#about-me {
+  margin-top: 20px;
   background: var(--white);
-  padding: 30px;
+  padding: 20px;
   border-radius: 12px;
+  font-size: 1.05rem;
+  line-height: 1.6;
 }
 
-.gallery h2 {
-  margin-top: 0;
-}
-
-.gallery-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
-  gap: 20px;
+/* Right column images */
+.right-column {
+  width: 250px; /* adjust as needed */
+  display: flex;
+  flex-direction: column;
   align-items: center;
+  gap: 20px;
 }
 
-.gallery-grid img {
+.right-column img {
   width: 100%;
   max-height: 120px;
   object-fit: contain;
 }
-
