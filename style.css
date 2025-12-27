@@ -3,12 +3,13 @@
   --nd-gold: #c99700;
   --sky-blue: #e6f2ff;
   --white: #ffffff;
+  --black: #000000;
 }
 
 body {
   font-family: Arial, sans-serif;
   margin: 0;
-  background-color: var(--sky-blue);
+  background-color: var(--black);
   color: var(--nd-blue);
 }
 
