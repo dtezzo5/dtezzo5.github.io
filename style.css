@@ -62,7 +62,7 @@ nav a:hover {
 
 .profile img {
   width: 230px;
-  border-radius: 50%;
+  border-radius: 0%;
   border: none;
   object-fit: cover;
     /* 4px solid var(--nd-gold); */
