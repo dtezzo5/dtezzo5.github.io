@@ -1,10 +1,48 @@
 :root {
-  --bg-color: #050505;      /* Dark background */
-  --text-color: #ffffff;    /* White text */
-  --section-bg: #111111;    /* Slightly lighter dark for boxes */
+  /* Default State: Light Mode */
+  --bg-color: #f4f7f9;      /* Soft light blue-grey */
+  --text-color: #0c2340;    /* ND Navy */
+  --section-bg: #ffffff;    /* Pure white for cards */
+  --accent: #08A04B;        /* Irish Green */
+  --nav-bg: #0c2340;        /* Navy Nav Bar */
+  --btn-bg: rgba(0, 0, 0, 0.05); /* Very faint opaque dark */
+}
+
+/* Alternate State: Dark Mode */
+body.dark-theme {
+  --bg-color: #121212;      /* Deep Charcoal */
+  --text-color: #e0e0e0;    /* Off-white */
+  --section-bg: #1e1e1e;    /* Dark card background */
   --accent: #c99700;        /* ND Gold */
-  --nd-blue: #0c2340;
-  --irish-green: #08A04B;
+  --nav-bg: #000000;        /* Black Nav Bar */
+  --btn-bg: rgba(255, 255, 255, 0.1); /* Faint opaque light */
+}
+
+body {
+  font-family: 'Inter', sans-serif;
+  margin: 0;
+  background-color: var(--bg-color);
+  color: var(--text-color);
+  transition: background-color 0.4s ease, color 0.4s ease;
+}
+
+/* Opaque Button Styling */
+#theme-toggle {
+  background-color: var(--btn-bg);
+  color: var(--text-color);
+  border: 1px solid rgba(128, 128, 128, 0.3);
+  padding: 8px 16px;
+  border-radius: 20px;
+  cursor: pointer;
+  font-weight: 600;
+  backdrop-filter: blur(8px); /* The "Glass" effect */
+  transition: all 0.3s ease;
+}
+
+#theme-toggle:hover {
+  border-color: var(--accent);
+  background-color: var(--btn-bg);
+  transform: translateY(-1px); /* Subtle lift */
 }
 
 h1 {
@@ -22,20 +60,6 @@ p {
   line-height: 1.6;
 }
 
-body.light-theme {
-  --bg-color: #e6f2ff;      /* Light blue background */
-  --text-color: #0c2340;    /* Navy text */
-  --section-bg: #ffffff;    /* White boxes */
-  --accent: #08A04B;        /* Green accent */
-}
-
-body {
-  font-family: 'Inter', sans-serif;
-  margin: 0;
-  background-color: var(--bg-color);
-  color: var(--text-color);
-  transition: all 0.3s ease; /* Smooth transition when switching modes */
-}
 
 /* Navigation bar */
 nav {
