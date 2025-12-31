@@ -5,6 +5,7 @@
   --white: #ffffff;
   --black: #000000;
   --irish-green: #08A04B;
+  --light-blue: #ADD8E6;
 }
 h1 {
   font-size: 2.4rem;
@@ -23,13 +24,13 @@ p {
 body {
   font-family: 'Inter', sans-serif;
   margin: 0;
-  background-color: var(--sky-blue);
+  background-color: var(--light-blue);
   color: var(--sky-blue);
 }
 
 /* Navigation bar */
 nav {
-  background-color: var(--nd-blue);
+  background-color: var(--light-blue);
   padding: 15px;
 }
 
@@ -56,7 +57,7 @@ nav a:hover {
   display: flex;
   align-items: center;
   gap: 30px;
-  background: var(--sky-blue);
+  background: var(--light-blue);
   padding: 30px;
   border-radius: 12px;
   /*line for the border */
@@ -74,7 +75,7 @@ nav a:hover {
 /* Image gallery */
 .gallery {
   margin-top: 40px;
-  background: var(--sky-blue);
+  background: var(--light-blue);
   padding: 30px;
   border-radius: 12px;
 }
