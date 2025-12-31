@@ -89,6 +89,10 @@ nav a:hover {
   color: var(--accent);
 }
 
+.active-link {
+  border-bottom: 2px solid var(--accent); /* Adds a Gold/Green underline */
+}
+
 /* Main layout */
 .container {
   max-width: 1000px;
@@ -139,9 +143,7 @@ nav a:hover {
   object-fit: contain;
 }
 
-.active-link {
-  border-bottom: 2px solid var(--accent); /* Adds a Gold/Green underline */
-}
+
 
 /* Layout for the profile content */
 .profile-main {
