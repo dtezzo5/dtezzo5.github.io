@@ -1,12 +1,12 @@
 :root {
+  --bg-color: #050505;      /* Dark background */
+  --text-color: #ffffff;    /* White text */
+  --section-bg: #111111;    /* Slightly lighter dark for boxes */
+  --accent: #c99700;        /* ND Gold */
   --nd-blue: #0c2340;
-  --nd-gold: #c99700;
-  --sky-blue: #e6f2ff;
-  --white: #ffffff;
-  --black: #000000;
   --irish-green: #08A04B;
-  --light-blue: #ADD8E6;
 }
+
 h1 {
   font-size: 2.4rem;
   font-weight: 600;
@@ -21,11 +21,20 @@ p {
   font-size: 1.05rem;
   line-height: 1.6;
 }
+
+body.light-theme {
+  --bg-color: #e6f2ff;      /* Light blue background */
+  --text-color: #0c2340;    /* Navy text */
+  --section-bg: #ffffff;    /* White boxes */
+  --accent: #08A04B;        /* Green accent */
+}
+
 body {
   font-family: 'Inter', sans-serif;
   margin: 0;
-  background-color: var(--light-blue);
-  color: var(--sky-blue);
+  background-color: var(--bg-color);
+  color: var(--text-color);
+  transition: all 0.3s ease; /* Smooth transition when switching modes */
 }
 
 /* Navigation bar */
@@ -57,19 +66,16 @@ nav a:hover {
   display: flex;
   align-items: center;
   gap: 30px;
-  background: var(--light-blue);
+  background: var(--section-bg);
   padding: 30px;
   border-radius: 12px;
-  /*line for the border */
-  border: 2px solid var(--nd-blue);
+  border: 2px solid var(--accent);
 }
 
 .profile img {
-  width: 230px;
-  border-radius: 25%;
-  border: none;
+  width: 250px;             /* Larger size */
+  border-radius: 20px;      /* Rounded square instead of circle */
   object-fit: cover;
-    /* 4px solid var(--nd-gold); */
 }
 
 /* Image gallery */
@@ -96,3 +102,6 @@ nav a:hover {
   max-height: 120px;
   object-fit: contain;
 }
+
+/* theme - toggle */
+
