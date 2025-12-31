@@ -63,15 +63,17 @@ p {
 
 /* Navigation bar */
 nav {
-  background-color: var(--nd-blue);
-  padding: 15px;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start; /* Keeps links to the left */
+  background-color: var(--nav-bg);
+  padding: 15px 40px;
 }
 
 nav a {
-  color: var(--sky-blue);
+  color: white; /* Keep links white on the dark nav bar */
   text-decoration: none;
   margin-right: 20px;
-  font-weight: bold;
 }
 
 nav a:hover {
@@ -128,4 +130,18 @@ nav a:hover {
 }
 
 /* theme - toggle */
-
+<script>
+  const btn = document.getElementById("theme-toggle");
+  
+  // Check if user has a preference saved in their browser
+  btn.addEventListener("click", function() {
+    document.body.classList.toggle("dark-theme");
+    
+    // Optional: Update button text based on mode
+    if (document.body.classList.contains("dark-theme")) {
+      btn.textContent = "☀️ Light Mode";
+    } else {
+      btn.textContent = "🌙 Dark Mode";
+    }
+  });
+</script>
