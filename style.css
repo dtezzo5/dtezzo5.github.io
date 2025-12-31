@@ -5,7 +5,7 @@
   --section-bg: #ffffff;    /* Pure white for cards */
   --accent: #08A04B;        /* Irish Green */
   --nav-bg: #0c2340;        /* Navy Nav Bar */
-  --btn-bg: rgba(255, 255, 255, 0.1); /* Very faint opaque dark */
+  --btn-bg: rgba(0, 0, 0, 0.05); /* Very faint opaque dark */
 }
 
 /* Alternate State: Dark Mode */
@@ -29,7 +29,7 @@ body {
 /* Opaque Button Styling */
 #theme-toggle {
   background-color: var(--btn-bg);
-  color: var(#ffffff);
+  color: var(#ffffff) !important; /* Forces text to stay white */
   border: 1px solid rgba(128, 128, 128, 0.3);
   padding: 8px 16px;
   border-radius: 20px;
