@@ -64,20 +64,29 @@ p {
 /* Navigation bar */
 nav {
   display: flex;
-  align-items: center;
-  justify-content: flex-start; /* Keeps links to the left */
+  justify-content: space-between; /* This pushes links to left and button to right */
+  align-items: center;            /* Perfectly centers button and text vertically */
   background-color: var(--nav-bg);
   padding: 15px 40px;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+.nav-links {
+  display: flex;
+  gap: 20px;
 }
 
 nav a {
-  color: white; /* Keep links white on the dark nav bar */
+  color: white; 
   text-decoration: none;
-  margin-right: 20px;
+  font-weight: 600;
+  transition: color 0.3s;
 }
 
 nav a:hover {
-  color: var(--irish-green);
+  color: var(--accent);
 }
 
 /* Main layout */
