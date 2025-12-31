@@ -5,7 +5,7 @@
   --section-bg: #ffffff;    /* Pure white for cards */
   --nav-bg: #041221;      /* Darkest: Deep Midnight */
   --accent: #1e4b8a;      /* Lighter: Steel Blue (Distinguishable) */
-  --btn-bg: rgba(0, 0, 0, 0.05); /* Very faint opaque dark */
+  --btn-bg: rgba(255, 255, 255, 0.1); /* Very faint opaque dark */
 }
 
 /* Alternate State: Dark Mode */
